@@ -1,0 +1,6 @@
+<%= turbo_stream.prepend "palindroms" do %>
+  <%= render "palindrom", palindrom: @palindrom %>
+<% end %>
+<%= turbo_stream.replace "#{dom_id(Palindrom.new)}_form" do %>
+  <%= render "form", palindrom: Palindrom.new %>
+<% end %>
